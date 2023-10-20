@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Fekus2/App.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimPriorityViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimPriorityViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimStatusViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimStatusViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/ClaimViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/CustomerViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/CustomerViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/EquipmentViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/EquipmentViews/Dialog/AddItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/EquipmentViews/Dialog/EditItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/EquipmentViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/MainWindow.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipment/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/ChooseItem.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/Dialog/AddItem.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/Dialog/AddItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/Dialog/ChooseItem.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/Dialog/EditItem.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentsView/Dialog/TypeOfEquipmentsAddItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentsView/Dialog/TypeOfEquipmentsEditItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfEquipmentsView/TypeOfEquipmentsTableView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfFaultViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/TypeOfFaultViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WindowTypeOfEquipments/TableTypeOfFaultWindowView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerRoleViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerRoleViews/Dialog/AddItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerRoleViews/Dialog/EditItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerRoleViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerViews/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerViews/Dialog/AddItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerViews/Dialog/ChangeItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerViews/Dialog/EditItemView.axaml" value="Fekus2/Fekus2.csproj" />
+        <entry key="Fekus2/Views/WorkerViews/Table.axaml" value="Fekus2/Fekus2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

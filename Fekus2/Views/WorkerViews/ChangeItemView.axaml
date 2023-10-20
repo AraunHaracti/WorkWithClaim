@@ -1,0 +1,42 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:models="clr-namespace:Fekus2.Models"
+        CanResize="False"
+        SizeToContent="WidthAndHeight"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Fekus2.Views.WorkerViews.ChangeItemView"
+        x:DataType="models:Worker"
+        Title="WorkerChangeItemView">
+  
+  <StackPanel Orientation="Vertical" Margin="10">
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Имя" Width="120" Margin="10"/>
+      <TextBox Text="{Binding Name}" Width="200" Margin="10"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Логин" Width="120" Margin="10"/>
+      <TextBox Text="{Binding Login}" Width="200" Margin="10"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Пароль" Width="120" Margin="10"/>
+      <TextBox Text="{Binding Password}" Width="200" Margin="10"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Роль ID" Width="120" Margin="10"/>
+      <TextBox Text="{Binding RoleId}" Width="200" Margin="10"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Horizontal">
+      <Button x:Name="Change" Content="Применить" Click="Change_OnClick" Width="160" Margin="10" HorizontalContentAlignment="Center"/>
+      <Button x:Name="Cancel" Content="Отмена" Click="Cancel_OnClick" Width="160" Margin="10" HorizontalContentAlignment="Center"/>
+    </StackPanel>
+    
+  </StackPanel>
+  
+</Window>

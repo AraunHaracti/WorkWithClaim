@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Fekus2.ViewModels"
+        CanResize="False"
+        SizeToContent="WidthAndHeight"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Fekus2.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Fekus2">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  
+  <Window.Styles>
+    <Style Selector="Button.TableButton">
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="Margin" Value="5"/>
+      </Style>
+  </Window.Styles>
+  
+  <StackPanel Orientation="Horizontal">
+    
+    <StackPanel Orientation="Vertical">
+      <Button Name="ClaimStatus" Content="Статус заказа" Click="ClaimStatus_OnClick" Classes="TableButton"/>
+      <Button Name="ClaimPriority" Content="Приоритет заказа" Click="ClaimPriority_OnClick" Classes="TableButton"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Vertical">
+      <Button Name="TypeOfEquipment" Content="Типы приборов" Click="TypeOfEquipment_OnClick" Classes="TableButton"/>
+      <Button Name="TypeOfFault" Content="Типы неисправностей" Click="TypeOfFault_OnClick" Classes="TableButton"/>
+      <Button Name="WorkerRole" Content="Роли" Click="WorkerRole_OnClick" Classes="TableButton"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Vertical">
+      <Button Name="Equipment" Content="Приборы" Click="Equipment_OnClick" Classes="TableButton"/>
+      <Button Name="Worker" Content="Работники" Click="Worker_OnClick" Classes="TableButton"/>
+      <Button Name="Customer" Content="Заказчики" Click="Customer_OnClick" Classes="TableButton"/>
+    </StackPanel>
+    
+    <StackPanel Orientation="Vertical">
+      <Button Name="Claim" Content="Заказы" Click="Claim_OnClick" Classes="TableButton"/>
+    </StackPanel>
+    
+  </StackPanel>
+  
+</Window>

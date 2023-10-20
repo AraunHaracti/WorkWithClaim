@@ -1,0 +1,38 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:Fekus2.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="400" Height="310" CanResize="False"
+        x:Class="Fekus2.Views.ClaimStatusViews.Table"
+        x:DataType="vm:ClaimStatusTableViewModel"
+        Title="Статусы заказов">
+    
+    <Design.DataContext>
+        <vm:ClaimStatusTableViewModel/>
+    </Design.DataContext>
+    
+    <StackPanel Orientation="Vertical">
+
+        <DataGrid x:Name="ItemDataGrid" 
+                  x:CompileBindings="False" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="True" 
+                  ItemsSource="{Binding ItemsOnDataGrid}"
+                  Height="250">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding StatusId}" Width="100"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Status}" Width="300"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="15">
+            <Button x:Name="Exit" Content="Вернуться" Click="Exit_OnClick" Width="150" HorizontalContentAlignment="Center"/>
+        </StackPanel>
+        
+    </StackPanel>
+        
+</Window>

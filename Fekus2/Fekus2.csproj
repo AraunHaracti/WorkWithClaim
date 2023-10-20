@@ -1,0 +1,122 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Models\" />
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.2" />
+        <PackageReference Include="MySql.Data" Version="8.1.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Views\EquipmentViews\Dialog\AddItemView.axaml.cs">
+        <DependentUpon>AddItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\EquipmentViews\Dialog\EditItemView.axaml.cs">
+        <DependentUpon>EditItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\EquipmentViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerRoleViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerRoleViews\Dialog\AddItemView.axaml.cs">
+        <DependentUpon>AddItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerRoleViews\Dialog\EditItemView.axaml.cs">
+        <DependentUpon>EditItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerViews\Dialog\AddItemView.axaml.cs">
+        <DependentUpon>AddItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerViews\Dialog\EditItemView.axaml.cs">
+        <DependentUpon>EditItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerRoleViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\WorkerViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\TypeOfEquipmentViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\EquipmentViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\ClaimPriorityViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\ClaimStatusViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\TypeOfFaultViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\TypeOfFaultViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\CustomerViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\CustomerViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\ClaimViews\ChangeItemView.axaml.cs">
+        <DependentUpon>ChangeItemView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\ClaimViews\Table.axaml.cs">
+        <DependentUpon>Table.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\TypeOfEquipmentViews\Dialog\AddItemView.axaml" />
+      <UpToDateCheckInput Remove="Views\TypeOfEquipmentViews\Dialog\EditItemView.axaml" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,72 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:Fekus2.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fekus2"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="960" Height="520" CanResize="False"
+        x:Class="Fekus2.Views.ClaimViews.Table"
+        x:DataType="vm:ClaimTableViewModel"
+        Title="ClaimTableView">
+    
+    <Design.DataContext>
+        <vm:ClaimTableViewModel/>
+    </Design.DataContext>
+    
+    <Window.Styles>
+        <Style Selector="TextBox.Search">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style Selector="Button.Action">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Styles>
+    
+    <StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBox x:Name="SearchTextBox" Text="{Binding SearchQuery, Mode=TwoWay}" Classes="Search" />
+            <Button x:Name="Add" Content="Добавить" Command="{Binding AddItem}" Classes="Action" HorizontalContentAlignment="Center"/>
+            <Button x:Name="Delete" Content="Удалить" Command="{Binding DeleteItem}" Classes="Action" HorizontalContentAlignment="Center"/>    
+            <Button x:Name="Edit" Content="Редактировать" Command="{Binding EditItem}" Classes="Action" HorizontalContentAlignment="Center"/>
+            <Button x:Name="Exit" Content="Вернуться" Click="Exit_OnClick" Classes="Action" HorizontalContentAlignment="Center"/>    
+        </StackPanel>
+        
+        <DataGrid x:Name="ItemDataGrid" 
+                  x:CompileBindings="False" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="True" 
+                  ItemsSource="{Binding ItemsOnDataGrid}"
+                  SelectedItem="{Binding CurrentItem}"
+                  Height="400">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClaimID}" Width="100"/>
+                <DataGridTextColumn Header="Прибор ID" Binding="{Binding EquipmentId}" Width="130"/>
+                <DataGridTextColumn Header="Проблема ID" Binding="{Binding TypeOfFaultID}" Width="130"/>
+                <DataGridTextColumn Header="СтатусID" Binding="{Binding StatusId}" Width="130"/>
+                <DataGridTextColumn Header="Приоритет ID" Binding="{Binding PriorityId}" Width="130"/>
+                <DataGridTextColumn Header="Заказчик ID" Binding="{Binding CustomerId}" Width="130"/>
+                <DataGridTextColumn Header="Работник ID" Binding="{Binding WorkerId}" Width="130"/>
+                
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="400"/>
+                
+                <DataGridTextColumn Header="Дата добавления" Binding="{Binding DateAdded, StringFormat=d}" Width="150"/>
+                <DataGridTextColumn Header="Дата окончания" Binding="{Binding CompletionDate, StringFormat=d}" Width="150"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="15">
+            <Button x:Name="First" Content="&lt;&lt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.FirstItems}" Margin="5"/>
+            <Button x:Name="Previous" Content="&lt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.PreviousItems}" Margin="5"/>
+            <Button x:Name="Next" Content="&gt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.NextItems}" Margin="5"/>
+            <Button x:Name="Last" Content="&gt;&gt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.LastItems}" Margin="5"/>
+        </StackPanel>
+        
+    </StackPanel>
+        
+</Window>

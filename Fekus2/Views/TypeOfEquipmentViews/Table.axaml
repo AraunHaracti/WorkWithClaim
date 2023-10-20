@@ -1,0 +1,66 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="using:Fekus2.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fekus2"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="410" Height="600" CanResize="False"
+        x:Class="Fekus2.Views.TypeOfEquipmentViews.Table"
+        x:DataType="vm:TypeOfEquipmentTableViewModel"
+        Title="TypeOfEquipmentsTableView">
+    
+    <Design.DataContext>
+        <vm:TypeOfEquipmentTableViewModel></vm:TypeOfEquipmentTableViewModel>
+    </Design.DataContext>
+    
+    <Window.Styles>
+        <Style Selector="TextBox.Search">
+            <Setter Property="Width" Value="390"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style Selector="Button.Action">
+            <Setter Property="Width" Value="190"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Styles>
+    
+    <StackPanel>
+        
+        <StackPanel Orientation="Vertical" Margin="5">
+            <TextBox x:Name="SearchTextBox" Text="{Binding SearchQuery, Mode=TwoWay}" Classes="Search" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Add" Content="Добавить" Command="{Binding AddItem}" Classes="Action" HorizontalContentAlignment="Center"/>
+                <Button x:Name="Delete" Content="Удалить" Command="{Binding DeleteItem}" Classes="Action" HorizontalContentAlignment="Center"/>    
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Edit" Content="Редактировать" Command="{Binding EditItem}" Classes="Action" HorizontalContentAlignment="Center"/>
+                <Button x:Name="Exit" Content="Вернуться" Click="Exit_OnClick" Classes="Action" HorizontalContentAlignment="Center"/>    
+            </StackPanel>
+        </StackPanel>
+        
+        <DataGrid x:Name="ItemDataGrid" 
+                  x:CompileBindings="False" 
+                  AutoGenerateColumns="False" 
+                  IsReadOnly="True" 
+                  ItemsSource="{Binding ItemsOnDataGrid}"
+                  SelectedItem="{Binding CurrentItem}"
+                  Height="400">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding TypeId}" Width="100"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="310"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="15">
+            <Button x:Name="First" Content="&lt;&lt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.FirstItems}" Margin="5"/>
+            <Button x:Name="Previous" Content="&lt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.PreviousItems}" Margin="5"/>
+            <Button x:Name="Next" Content="&gt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.NextItems}" Margin="5"/>
+            <Button x:Name="Last" Content="&gt;&gt;" Command="{Binding TakeItems}" CommandParameter="{x:Static local:TakeItemsEnum.LastItems}" Margin="5"/>
+        </StackPanel>
+        
+    </StackPanel>
+        
+</Window>
